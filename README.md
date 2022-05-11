@@ -1,6 +1,6 @@
-# shop_app
+# Flutter Shop App
 
-A new Flutter project.
+A shop app Flutter project built as a project to help me familiarize myself with the Dart SDK and building mobile apps in Flutter.
 
 ## Getting Started
 

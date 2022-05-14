@@ -8,6 +8,8 @@ class Product { // Not widget, just a class for model
   final String imgUrl;
   bool isFavorite;
 
+  // Class Constructor
+  // Initialize variables
   Product({
     @required this.id, 
     @required this.title, 

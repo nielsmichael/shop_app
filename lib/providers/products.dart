@@ -43,6 +43,10 @@ class Products with ChangeNotifier {
     return [..._items]; // Return reference
   }
 
+  Product findById(String id) {
+    return _items.firstWhere((prod) => prod.id == id);
+  }
+
   void addProduct() {
     // _items.add(value); 
     // Will add back in later after we add products

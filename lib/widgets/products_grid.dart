@@ -14,10 +14,13 @@ class ProductsGrid extends StatelessWidget {
     return GridView.builder( // This renders only items that are on the screen, helping with performance in the case of a particularly long list of items (in this case, products)
       padding: const EdgeInsets.all(10.0),
       itemCount: products.length, // Tells gridview how many items to build
-      itemBuilder: (ctx, i) => ProductItem(
-        products[i].id, 
-        products[i].title, 
-        products[i].imgUrl
+      itemBuilder: (ctx, i) => ChangeNotifierProvider(
+        create: (c) => products[i],
+        child: ProductItem(
+          // products[i].id, 
+          // products[i].title, 
+          // products[i].imgUrl
+        ),
       ), // Fwd to ProductItem widget
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2, 

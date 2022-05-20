@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class Product { // Not widget, just a class for model
+class Product with ChangeNotifier { // Not widget, just a class for model
   final String id;
   final String title;
   final String description;
@@ -18,4 +18,9 @@ class Product { // Not widget, just a class for model
     @required this.imgUrl, 
     this.isFavorite = false,
     });
+
+    void toggleFavStatus() {
+      isFavorite = !isFavorite;
+      notifyListeners(); // Sort of like setState within the provider pkg
+    }
 }

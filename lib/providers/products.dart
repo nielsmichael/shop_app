@@ -25,8 +25,7 @@ class Products with ChangeNotifier {
       title: 'Yellow Scarf',
       description: 'Warm and cozy - exactly what you need for the winter.',
       price: 19.99,
-      imgUrl:
-          'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
+      imgUrl: 'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
     ),
     Product(
       id: 'p4',
@@ -68,7 +67,7 @@ class Products with ChangeNotifier {
   // }
 
   void addProduct() {
-    // _items.add(value); 
+    // _items.add(value);
     // Will add back in later after we add products
     notifyListeners();
   }
